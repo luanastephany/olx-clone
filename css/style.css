@@ -22,6 +22,8 @@
 }
 
 header{
+    display: flex;
+    justify-content: center;
     height: 80px;
     width: 100%;
     border-bottom: 1px solid rgb(229, 229, 229);
@@ -29,10 +31,10 @@ header{
 
 header .content{
     display: flex;
+    width: var(--width);
     flex-direction: row;
     align-items: center;
     padding: 8px;
-    margin-left: 150px;
 }
 
 /* Ícone da OLX */
@@ -43,18 +45,88 @@ header .content .logo img{
 
 /* Palavra Buscar do header */
 header .content #buscar{
-    text-decoration: none;
-    color: rgb(153, 153, 153);
+    display: flex;
+    flex: 1;
     margin-left: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+header .content #buscar a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+header .content #buscar a:hover{
+    color: var(--primary);
+}
+
+/*Meus anúncios e chat */
+header .content .actions{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Button com "meus anúncios" e chat*/
+header .content .actions .action{
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-right: 32px;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+header .content .actions .action:hover{
+    color: var(--primary);
+}
+
+/* Ícones grid e chat que viraram svg */
+header .content .actions .action svg{
+    margin-right: 10px;
 }
 
 /* Avatar */
+header .content .avatar{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-right: 25px;
+    align-items: center;
+}
+
+header .content .avatar:hover{
+    color: var(--primary);
+}
+
 header .content .avatar img{
     display: flex;
-    height: 48px;
-    width: 48px;
+    flex-direction: row;
+    height: 32px;
+    width: 32px;
     border-radius: 50%;
     object-fit: fill;
+    margin-right: 10px;
+    color: var(--text);
+}
+
+header .content p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Setinha para baixo ao lado do nome */
+header .content .avatar svg{
+    width: 14px;
+    margin-left: 5px;
+    color: var(--text-light);
 }
 
 /* Botão de Anunciar */
@@ -63,6 +135,7 @@ header .content .anunciar{
     color: white;
     border: 1px solid var(--secondary);
     height: 40px;
+    width: 120px;
     margin-right: 16px;
     border-radius: 20px;
     display: flex;
@@ -78,28 +151,11 @@ header .content .anunciar:hover{
     background-color: #f8ab6b;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 section{
     width: var(--width);
 }
 
-/*Breadcrumb*/
+/*Breadcrumb */
 .breadcrumb{
     display: flex;
     width: 100%;
